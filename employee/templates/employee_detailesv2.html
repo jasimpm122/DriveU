@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <h2>Employee Table</h2>
+</head>
+
+<body>
+
+<div class="Employeeform">
+    <h3> Add employee</h3>
+    <form method="post" action="{% url 'add_employee' %}">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Submit</button>
+    </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<h3>Employee List</h3>
+<table>
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>DOB</th>
+        <th>Email</th>
+        <th>Mobile Number</th>
+
+        <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for employee in objects %}
+    <tr>
+        <td>{{employee.name}}</td>
+        <td>{{employee.dob}}</td>
+        <td>{{employee.email}}</td>
+        <td>{{employee.mobile_number}}</td>
+
+        <td>
+            <a href="{% url 'delete_employee' %}">Delete</a>
+        </td>
+    </tr>
+
+    <title>Employee Table</title>
+
+    <style>
+        table {
+     width: 100%;
+     border-collapse: collapse;
+     margin-top: 20px;
+ }
+
+ th, td {
+     border: 1px solid #ddd;
+     padding: 8px;
+     text-align: left;
+ }
+
+ th {
+     background-color: #f2f2f2;
+ }
+
+ a {
+     display: inline-block;
+     margin-right: 10px;
+     padding: 5px 10px;
+     text-decoration: none;
+     color: #fff;
+     background-color: #4CAF50;
+     border-radius: 3px;
+ }
+    </style>
+    {% endfor %}
+
+    </tbody>
+</table>
+</html>
