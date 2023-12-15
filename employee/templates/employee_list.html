@@ -22,7 +22,7 @@
         <td>{{employee.mobile_number}}</td>
 
         <td>
-            <a href="{% url 'delete_employee' %}">Delete</a>
+            <a href="{% url 'delete_employee' employee_id=employee.id%}">Delete</a>
         </td>
     </tr>
 
